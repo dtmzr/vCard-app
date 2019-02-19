@@ -1,0 +1,35 @@
+<!-- views/pages/delete.ejs -->
+
+<% layout('../layouts/base') -%>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Delete vCard</h1>
+            <a href="/">Back to the list</a>
+            <br>
+            <a href="/<%- vcard.slug %>">Back to card</a>
+            
+            <ul class="my-5">
+                <li>Firstname: <%- vcard.firstname %></li>
+                <li>Lastanem: <%- vcard.lastname %></li>
+                <li>Email: <%- vcard.email %></li>
+                <li>Phone: <%- vcard.phone %></li>
+                <li>Website: <%- vcard.website %></li>
+                <li>Street: <%- vcard.street %></li>
+                <li>Street no.: <%- vcard.street_no %></li>
+                <li>Zipcode: <%- vcard.zip %></li>
+                <li>City: <%- vcard.city %></li>
+                <li>Company: <%- vcard.company %></li>
+                <li>Job: <%- vcard.job %></li>
+            </ul>
+
+            <form method="POST">
+                <p>Are you sure you want to delete this card?</p>
+                <button type="submit" class="btn btn-danger">
+                    Delete
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

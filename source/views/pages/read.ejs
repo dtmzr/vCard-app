@@ -1,0 +1,45 @@
+<!-- views/pages/read.ejs -->
+
+<% layout('../layouts/base') -%>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>View vCard</h1>
+            <a href="/">Back to the list</a>
+            <br>
+            <a href="/<%- vcard.slug %>/update">Edit card</a>
+            <br>
+            <br>
+            <a href="/<%- vcard.slug %>/contact.vcf" target="_blank">Open VCF endpoint</a>
+            <br>
+            <a href="/public/cards/<%- vcard.slug %>/contact.vcf" target="_blank">Open VCF file</a>
+            <br>
+            <a href="/public/cards/<%- vcard.slug %>/dynamic-qrcode.png" target="_blank">Open dynamic qr code</a>
+            <br>
+            <a href="/public/cards/<%- vcard.slug %>/static-qrcode.png" target="_blank">Open static qr code</a>
+            
+            <ul class="my-5">
+                <li>Firstname: <%- vcard.firstname %></li>
+                <li>Lastanem: <%- vcard.lastname %></li>
+                <li>Email: <%- vcard.email %></li>
+                <li>Phone: <%- vcard.phone %></li>
+                <li>Website: <%- vcard.website %></li>
+                <li>Street: <%- vcard.street %></li>
+                <li>Street no.: <%- vcard.street_no %></li>
+                <li>Zipcode: <%- vcard.zip %></li>
+                <li>City: <%- vcard.city %></li>
+                <li>Company: <%- vcard.company %></li>
+                <li>Job: <%- vcard.job %></li>
+            </ul>
+
+            <h2>VCF endpoint qr code</h2>
+            <p>This qr code links the user to the vcf endpoint, which exposes a dynamically created vcard. This would allow to print the qr code and change the linked data afterwards.</p>
+            <img src="/public/cards/<%- vcard.slug %>/dynamic-qrcode.png"/>
+
+            <h2 class="mt-5">VCF data qr code</h2>
+            <p>This qr code includes the data which makes it static.</p>
+            <img src="/public/cards/<%- vcard.slug %>/static-qrcode.png"/>
+        </div>
+    </div>
+</div>

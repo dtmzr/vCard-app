@@ -1,0 +1,20 @@
+<!-- views/pages/index.ejs -->
+
+<% layout('../layouts/base') -%>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>vCards</h1>
+            <a href="/create">Create your vCard</a>
+
+            <ul class="mt-5">
+                <% vcards.forEach(function(vcard) { %>
+                    <li>
+                        <a href="/<%- vcard.slug %>"><%- vcard.lastname %>, <%- vcard.firstname %></a>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</div>

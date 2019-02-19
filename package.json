@@ -1,0 +1,31 @@
+{
+  "name": "vcard-app",
+  "version": "1.0.0",
+  "description": "Example usage of vCards-js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./source/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtmzr/vCard-app.git"
+  },
+  "author": "Deniz Temizer <hello@deniz-temizer.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dtmzr/vCard-app/issues"
+  },
+  "homepage": "https://github.com/dtmzr/vCard-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "ejs-locals": "^1.0.2",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.13",
+    "nodemon": "^1.18.10",
+    "qrcode": "^1.3.3",
+    "shortid": "^2.2.14",
+    "vcards-js": "^2.10.0"
+  }
+}
